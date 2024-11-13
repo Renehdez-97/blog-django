@@ -9,7 +9,7 @@
         <p>{{post.content}}</p>
         {% if user.is_authenticated %}
             {% for group in user.groups.all %}
-                {% if group.name=="Editores" %}
+                {% if group.name == "Editores" %}
                     <p>
                         <a href="{% url 'admin:blog_post_change' post.id %}" class="edit">Editar entrada</a>
                     </p>
